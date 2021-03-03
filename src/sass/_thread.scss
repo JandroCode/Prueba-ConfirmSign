@@ -1,0 +1,62 @@
+@import 'variables';
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color:rgb(247, 244, 244);
+}
+
+
+.card-info{
+    width: 60vw;
+    margin: 6% auto;
+}
+.card-info-item{
+    margin-top: 5px;
+    background-color: white;
+    padding: 1%;
+    border-radius:7px
+}
+
+.card-info-item {
+    strong{
+        display: inline-block;
+        font-style: italic;
+        width:100px;
+    }
+}
+
+.history-container{
+    table{
+        padding: 20px;
+        background-color: white;width: 60vw;
+        text-align: center;
+
+        th{
+            font-style: italic;
+        }
+
+    }
+
+}
+
+
+   
+
+nav{
+    margin:2% auto;
+    width: 60vw;
+    h2{
+        color:$corpColor;
+        font-size: 1.9rem;
+    }
+    hr{ 
+        background-color: $corpColor; height: 1px; border: 0;
+    }
+}
+
+.history-container{
+    margin-top: 10%;
+}
+
+
+
