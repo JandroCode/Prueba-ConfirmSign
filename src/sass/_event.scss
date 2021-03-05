@@ -1,0 +1,32 @@
+.event{
+    margin-top: 5%;
+}
+
+h3{
+    margin-top: 5%;
+    color: rgb(83, 79, 79);
+}
+
+.status{
+    display: inline-block;
+    background-color: $statusColor;
+    color: $cardEventItemColor;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+}
+
+.card-event-item{
+    display: flex;
+    justify-content: center;
+    background-color: $cardEventItemColor;
+    padding: 1%;
+    margin-top: 10px;
+}
+
+div{
+    span{
+        margin-left: 15px;
+    }
+}
+

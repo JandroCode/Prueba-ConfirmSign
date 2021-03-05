@@ -1,0 +1,65 @@
+
+.history-container{
+    table{
+        border-collapse: collapse;
+        width: $width;
+        margin:0 auto;
+        text-align: center;
+       
+        th{
+            font-style: italic;  
+        }
+        th{
+            padding: 1%;
+            background: $cellsColor;
+        }
+        td{
+            padding-top: 2%;
+            background: $cellsColor;
+        }
+    }
+}
+
+.separator{
+    width: 10px;
+    height: 4px;
+}
+
+td {
+    span{
+        padding: 3px;
+        color: black;
+    }
+
+}
+
+p > strong{
+    font-style: italic;
+}
+    
+nav{
+    margin:2% auto;
+    width: $width;
+    h2{
+        color:$corpColor;
+        font-size: 1.9rem;
+    }
+    .first-line{ 
+        background-color: $corpColor; height: 1px; border: 0;
+    }
+}
+
+@media(max-width:768px){
+    .card-info{
+        width: $widthResponsive;
+    }
+    .history-container > table{
+        width: 90vw;
+    }
+    nav{
+        width: $widthResponsive;
+    }
+}
+
+
+

@@ -2,17 +2,31 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color:rgb(247, 244, 244);
+    background-color:$bodyColor;
 }
 
+nav{
+    margin:2% auto;
+    width: $width;
+    h2{
+        color:$corpColor;
+        font-size: 1.9rem;
+    }
+    .first-line{ 
+        background-color: $corpColor; height: 1px; border: 0;
+    }
+}
 
 .card-info{
-    width: 60vw;
-    margin: 6% auto;
+    width: $width;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
 }
 .card-info-item{
     margin-top: 5px;
-    background-color: white;
+    background-color: $cardEventItemColor;
     padding: 1%;
     border-radius:7px
 }
@@ -25,38 +39,46 @@ body{
     }
 }
 
-.history-container{
-    table{
-        padding: 20px;
-        background-color: white;width: 60vw;
-        text-align: center;
+@media(max-width:768px){
+    .card-info{
+        width: $widthResponsive;
+    }
+    .history-container {
+        table{
+            width: $widthResponsive;
+        }
+        
+    }
+    nav{
+        width: $widthResponsive;
+    }
+}
 
-        th{
-            font-style: italic;
+@media(max-width:550px){
+    .card-info-item{
+        strong{
+            display: block;
+            margin-left: 3%;
         }
 
     }
-
-}
-
-
-   
-
-nav{
-    margin:2% auto;
-    width: 60vw;
-    h2{
-        color:$corpColor;
-        font-size: 1.9rem;
+    .card-info-item{
+        margin-top: 7%;
     }
-    hr{ 
-        background-color: $corpColor; height: 1px; border: 0;
+    h3{
+        margin-top: 20%;
+    }
+    .history-container{
+        margin-bottom: 20%;
+    }
+    nav{
+        h2{
+            text-align: center;
+        }
+        
     }
 }
 
-.history-container{
-    margin-top: 10%;
-}
 
 
 

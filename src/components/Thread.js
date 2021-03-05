@@ -42,23 +42,21 @@ export default class Thread extends Component{
       <>
       <nav>
         <h2>ConfirmSign Thread Comunication</h2>
-        <hr />
+        <hr className="first-line" />
       </nav>
-
-     
+   
       <div className="card-info">
         {
             <>
               <div className="card-info-item"><strong>CfsCode </strong><span>{this.state.cfscode}</span></div>
               <div className="card-info-item"><strong>Date</strong><span>{this.state.date}</span></div>
-              <div className="card-info-item"><strong>Subject </strong>{this.state.subject}</div>
-              <div className="card-info-item"><strong>Recipient </strong>{this.state.recipient}</div>
+              <div className="card-info-item"><strong>Subject </strong><span>{this.state.subject}</span></div>
+              <div className="card-info-item"><strong>Recipient </strong><span>{this.state.recipient}</span></div>
             </>
-              
-      
         }
 
         <div className="history-container">
+          <h3>History</h3>
           <table>
             <thead>
               <tr>
@@ -66,29 +64,33 @@ export default class Thread extends Component{
                 <th>Status</th>
               </tr>
             </thead>
-
+            
             <tbody>
+
+            <div className="separator"></div>
             {
             this.state.history.map((element,i) => (
               <tr key={element.sid}>
-                 <td>{element.date} </td> 
-                 <td>{element.status}</td>
+                 <td>{element.date} </td>
+                 <td><span>{element.status}</span></td>
               </tr>
-              ))}
               
+              ))}
             </tbody>
-
           </table>
-
         </div>
-
 
         {
             this.state.event.map((element,i) => (
-              <div key={element.sid}>
-                <h2>Evento particular</h2>
-                 <p><Hijo eventoDate={element.event.date}/></p>
-                 <p><Hijo eventoStatus={element.event.status}/></p>
+              <div  key={element.sid}>
+                <h3 className="event">Event Information</h3>
+                 <div className="card-event-item"><strong>Date</strong>
+                    <span><Hijo eventoDate={element.event.date}/></span>
+                </div>
+                <div className="card-event-item"><strong>Status</strong>
+                    <span className="status"><Hijo eventoDate={element.event.status}/></span>
+                </div>
+              
               </div>
               ))}
         </div>
