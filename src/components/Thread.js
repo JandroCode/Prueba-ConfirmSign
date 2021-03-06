@@ -22,7 +22,8 @@ export default class Thread extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://virtserver.swaggerhub.com/confirmsign/cfs-4_api/4.0/threads/4170504135949_101235_2_2488629_f385a')
+    const URL = 'https://virtserver.swaggerhub.com/confirmsign/cfs-4_api/4.0/threads/';
+    axios.get(`${URL}4170504135949_101235_2_2488629_f385a`)
       .then(res => {
         this.setState(
           {
