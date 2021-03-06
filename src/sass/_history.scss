@@ -5,15 +5,12 @@
         width: $width;
         margin:0 auto;
         text-align: center;
-    
-        thead{
-            padding-top: 20px;
-             
-        }
+
+     
         th{
-            padding:5% 1% 1% 1%;
+            padding: 5% 1% 1% 1%;
             background: $cellsColor;
-            font-style: italic; 
+            font-style: italic;  
         }
         td{
             padding-top: 2%;
@@ -22,17 +19,11 @@
     }
 }
 
-.separator{
-    width: 10px;
-    height: 4px;
-}
-
 td {
     span{
         padding: 3px;
         color: black;
     }
-
 }
 
 p > strong{
@@ -62,6 +53,7 @@ nav{
         width: $widthResponsive;
     }
 }
+
 
 
 

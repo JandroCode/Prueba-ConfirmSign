@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import History from './History'
+import History from './History';
+import NavFragment from '../fragments/NavFragment';
+import TheadFragment from '../fragments/TheadFragment';
+import CardInfoFragment from '../fragments/CardInfoFragment';
+
 
 export default class Thread extends Component {
   constructor(props) {
@@ -39,31 +43,18 @@ export default class Thread extends Component {
     }
     return (
       <>
-        <nav>
-          <h2>ConfirmSign Thread Comunication</h2>
-          <hr className="first-line" />
-        </nav>
-
+        <NavFragment />
         <div className="card-info">
           {
-            <>
-              <div className="card-info-item"><strong>CfsCode </strong><span>{this.state.cfscode}</span></div>
-              <div className="card-info-item"><strong>Date</strong><span>{this.state.date}</span></div>
-              <div className="card-info-item"><strong>Subject </strong><span>{this.state.subject}</span></div>
-              <div className="card-info-item"><strong>Recipient </strong><span>{this.state.recipient}</span></div>
-            </>
+            <CardInfoFragment cfscode={this.state.cfscode} date={this.state.date}
+                      subject={this.state.subject} recipient={this.state.recipient}      
+             />
           }
 
           <div className="history-container">
             <h3>History</h3>
             <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-
+              <TheadFragment/>
               <tbody>
                 {this.state.history.map((element) => (
                   <tr key={element.sid}>
@@ -77,14 +68,7 @@ export default class Thread extends Component {
 
           {this.state.event.map((element) => (
             <div key={element.sid}>
-              <h3 className="event">Event Information</h3>
-              <div className="card-event-item"><strong>Date</strong>
-                <span><History eventoDate={element.event.date} /></span>
-              </div>
-              <div className="card-event-item"><strong>Status</strong>
-                <span className="status"><History eventoDate={element.event.status} /></span>
-              </div>
-
+               <History eventoDate={element.event.date} eventoStatus={element.event.status} />
             </div>
           ))}
         </div>

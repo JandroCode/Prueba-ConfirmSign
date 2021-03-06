@@ -82,8 +82,15 @@ nav{
         
     }
 }
+@media(max-width:390px){
+    .card-info-item:first-child{
+        overflow: scroll;
+    }
 
-@media(max-width:380px){
+}
+
+
+@media(max-width:400px){
     .card-info-item:first-child{
         overflow: scroll;
     }
