@@ -80,7 +80,7 @@ export default class Thread extends Component {
             </table>
           </div>
 
-          {this.state.event.map((element, i) => (
+          {this.state.event.map((element) => (
             <div key={element.sid}>
               <h3 className="event">Event Information</h3>
               <div className="card-event-item"><strong>Date</strong>
