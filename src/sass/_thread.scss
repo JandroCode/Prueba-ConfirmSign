@@ -17,6 +17,8 @@ nav{
     }
 }
 
+
+
 .card-info{
     width: $width;
     margin-top: 3%;
@@ -56,18 +58,15 @@ nav{
 
 @media(max-width:550px){
     .card-info-item{
-        overflow: scroll;
         strong{
             display: block;
-            margin-left: 3%;
-            
+            margin-left: 3%; 
         }
-      
-
     }
     .card-info-item{
-        margin-top: 7%;
+        margin-top: 7%; 
     }
+
     .history-container{
         h3{
         margin-top: 20%;
@@ -82,6 +81,13 @@ nav{
         }
         
     }
+}
+
+@media(max-width:380px){
+    .card-info-item:first-child{
+        overflow: scroll;
+    }
+    
 }
 
 

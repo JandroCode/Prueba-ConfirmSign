@@ -5,13 +5,15 @@
         width: $width;
         margin:0 auto;
         text-align: center;
-       
-        th{
-            font-style: italic;  
+    
+        thead{
+            padding-top: 20px;
+             
         }
         th{
-            padding: 1%;
+            padding:5% 1% 1% 1%;
             background: $cellsColor;
+            font-style: italic; 
         }
         td{
             padding-top: 2%;

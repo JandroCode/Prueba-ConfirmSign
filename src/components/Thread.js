@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import History from './History'
 
-
 export default class Thread extends Component {
   constructor(props) {
     super(props)
@@ -39,7 +38,6 @@ export default class Thread extends Component {
       return 'Loading'
     }
     return (
-
       <>
         <nav>
           <h2>ConfirmSign Thread Comunication</h2>
@@ -67,15 +65,12 @@ export default class Thread extends Component {
               </thead>
 
               <tbody>
-
-                <div className="separator"></div>
-                {this.state.history.map((element, i) => (
+                {this.state.history.map((element) => (
                   <tr key={element.sid}>
                     <td>{element.date} </td>
                     <td><span>{element.status}</span></td>
                   </tr>
                 ))}
-
               </tbody>
             </table>
           </div>
@@ -93,7 +88,6 @@ export default class Thread extends Component {
             </div>
           ))}
         </div>
-
       </>
     )
   }
