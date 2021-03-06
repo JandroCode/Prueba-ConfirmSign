@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hijo from './History'
+import History from './History'
 
 
 export default class Thread extends Component {
@@ -30,8 +30,8 @@ export default class Thread extends Component {
             history: res.data.history,
             isFetch: false,
             event: res.data.agreement.forms
-          });
-      })
+          })
+      }).catch(err => console.log(err));
   }
 
   render() {
@@ -69,31 +69,29 @@ export default class Thread extends Component {
               <tbody>
 
                 <div className="separator"></div>
-                {
-                  this.state.history.map((element, i) => (
-                    <tr key={element.sid}>
-                      <td>{element.date} </td>
-                      <td><span>{element.status}</span></td>
-                    </tr>
+                {this.state.history.map((element, i) => (
+                  <tr key={element.sid}>
+                    <td>{element.date} </td>
+                    <td><span>{element.status}</span></td>
+                  </tr>
+                ))}
 
-                  ))}
               </tbody>
             </table>
           </div>
 
-          {
-            this.state.event.map((element, i) => (
-              <div key={element.sid}>
-                <h3 className="event">Event Information</h3>
-                <div className="card-event-item"><strong>Date</strong>
-                  <span><Hijo eventoDate={element.event.date} /></span>
-                </div>
-                <div className="card-event-item"><strong>Status</strong>
-                  <span className="status"><Hijo eventoDate={element.event.status} /></span>
-                </div>
-
+          {this.state.event.map((element, i) => (
+            <div key={element.sid}>
+              <h3 className="event">Event Information</h3>
+              <div className="card-event-item"><strong>Date</strong>
+                <span><History eventoDate={element.event.date} /></span>
               </div>
-            ))}
+              <div className="card-event-item"><strong>Status</strong>
+                <span className="status"><History eventoDate={element.event.status} /></span>
+              </div>
+
+            </div>
+          ))}
         </div>
 
       </>

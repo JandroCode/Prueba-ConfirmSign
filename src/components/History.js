@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hijo = (props) =>{
+const History = (props) =>{
     return(
       <>
         {props.eventoDate} {props.eventoStatus}
@@ -9,4 +9,4 @@ const Hijo = (props) =>{
   }
   
 
-export default Hijo
+export default History;
