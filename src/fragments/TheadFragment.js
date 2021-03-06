@@ -7,7 +7,7 @@ const TheadFragment = () => {
                 <th>Date</th>
                 <th>Status</th>
             </tr>
-        </thead>
+        </thead>  
     )
 }
 

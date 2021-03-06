@@ -56,14 +56,10 @@ nav{
 
 @media(max-width:550px){
     .card-info-item{
-        overflow: scroll;
         strong{
             display: block;
-            margin-left: 3%;
-            
+            margin-left: 3%; 
         }
-      
-
     }
     .card-info-item{
         margin-top: 7%;
@@ -83,6 +79,13 @@ nav{
         
     }
 }
+@media(max-width:390px){
+    .card-info-item:first-child{
+        overflow: scroll;
+    }
+
+}
+
 
 
 

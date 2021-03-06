@@ -55,8 +55,7 @@ export default class Thread extends Component {
             <table>
               <TheadFragment/>
               <tbody>
-                <div className="separator"></div>
-                {this.state.history.map((element, i) => (
+                {this.state.history.map((element) => (
                   <tr key={element.sid}>
                     <td>{element.date} </td>
                     <td><span>{element.status}</span></td>
@@ -66,19 +65,12 @@ export default class Thread extends Component {
             </table>
           </div>
 
-          {this.state.event.map((element, i) => (
+          {this.state.event.map((element) => (
             <div key={element.sid}>
-              <h3 className="event">Event Information</h3>
-              <div className="card-event-item"><strong>Date</strong>
-                <span><History eventoDate={element.event.date} /></span>
-              </div>
-              <div className="card-event-item"><strong>Status</strong>
-                <span className="status"><History eventoDate={element.event.status} /></span>
-              </div>
+               <History eventoDate={element.event.date} eventoStatus={element.event.status} />
             </div>
           ))}
         </div>
-
       </>
     )
   }
