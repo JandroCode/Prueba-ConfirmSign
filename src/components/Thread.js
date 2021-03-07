@@ -5,12 +5,9 @@ import NavFragment from '../fragments/NavFragment';
 import TheadFragment from '../fragments/TheadFragment';
 import CardInfoFragment from '../fragments/CardInfoFragment';
 
-
 export default class Thread extends Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
+  state = {
       cfscode: '',
       date: '',
       subject: '',
@@ -19,8 +16,7 @@ export default class Thread extends Component {
       isFetch: true,
       event: []
     }
-  }
-
+  
   componentDidMount() {
     const URL = 'https://virtserver.swaggerhub.com/confirmsign/cfs-4_api/4.0/threads/';
     axios.get(`${URL}4170504135949_101235_2_2488629_f385a`)
